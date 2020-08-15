@@ -23,6 +23,14 @@ config/icon="res://icon.png"
 
 Global="*res://Global.gd"
 
+[display]
+
+window/size/width=480
+window/size/height=320
+window/size/test_width=960
+window/size/test_height=640
+window/stretch/aspect="keep"
+
 [input]
 
 ui_left={
@@ -61,4 +69,4 @@ click={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_clear_color=Color( 0.133333, 0.133333, 0.133333, 1 )

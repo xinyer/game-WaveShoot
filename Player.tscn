@@ -4,6 +4,7 @@
 [ext_resource path="res://Player.gd" type="Script" id=2]
 
 [node name="Player" type="Sprite"]
+modulate = Color( 0, 0.0625, 1, 1 )
 position = Vector2( 480, 320 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
