@@ -6,6 +6,8 @@ var velocity = Vector2()
 var hit = false
 var hp = 3
 
+var blood = preload("res://BloodParticles.tscn")
+
 
 func _process(delta):
 	if Global.player != null && not hit:
@@ -16,6 +18,9 @@ func _process(delta):
 	global_position += velocity * SPEED * delta
 	
 	if hp == 0:
+		if Global.node_creation_parent != null:
+			var blood_node = Global.instance_node(blood, global_position, Global.node_creation_parent)
+			blood_node.rotation = velocity.angle()
 		queue_free()
 
 
