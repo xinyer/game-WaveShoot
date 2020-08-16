@@ -27,6 +27,7 @@ Global="*res://Global.gd"
 
 window/size/width=960
 window/size/height=640
+window/size/resizable=false
 window/size/test_width=960
 window/size/test_height=640
 window/stretch/aspect="keep"

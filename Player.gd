@@ -1,6 +1,7 @@
 extends Sprite
 
 const SPEED = 300
+const PLAYER_SIZE = Vector2(64, 64)
 
 var velocity = Vector2()
 var bullet = preload("res://Bullet.tscn")
@@ -17,6 +18,10 @@ func _process(delta):
 	# Player position
 	velocity.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	velocity.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	
+	# limit Player positon
+	global_position.x = clamp(global_position.x, PLAYER_SIZE.x, get_viewport_rect().size.x - PLAYER_SIZE.x)
+	global_position.y = clamp(global_position.y, PLAYER_SIZE.y, get_viewport_rect().size.y - PLAYER_SIZE.y)
 	
 	if not is_dead:
 		global_position += SPEED * velocity * delta
