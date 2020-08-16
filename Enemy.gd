@@ -18,6 +18,7 @@ func _process(delta):
 	global_position += velocity * SPEED * delta
 	
 	if hp == 0:
+		Global.score += 10
 		if Global.node_creation_parent != null:
 			var blood_node = Global.instance_node(blood, global_position, Global.node_creation_parent)
 			blood_node.rotation = velocity.angle()

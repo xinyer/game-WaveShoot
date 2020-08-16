@@ -11,7 +11,9 @@ modulate = Color( 1, 0, 0.858824, 1 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
-[node name="HitBox" type="Area2D" parent="."]
+[node name="HitBox" type="Area2D" parent="." groups=[
+"Enemy",
+]]
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
