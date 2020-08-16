@@ -13,15 +13,21 @@ func _process(delta):
 	if Global.player != null && not hit:
 		velocity = global_position.direction_to(Global.player.position)
 	elif hit:
-		velocity = lerp(velocity, Vector2(0, 0), 0.1)	
+		velocity = lerp(velocity, Vector2(0, 0), 0.1)
 	
 	global_position += velocity * SPEED * delta
 	
 	if hp == 0:
+		# screen shake
+		if Global.camera != null:
+			Global.camera.screen_shake(20, 0.2)
+		# score plus
 		Global.score += 10
+		# create blood
 		if Global.node_creation_parent != null:
 			var blood_node = Global.instance_node(blood, global_position, Global.node_creation_parent)
 			blood_node.rotation = velocity.angle()
+		# free
 		queue_free()
 
 

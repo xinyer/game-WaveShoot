@@ -7,6 +7,7 @@ var window_size
 
 func _ready():
 	Global.node_creation_parent = self
+	Global.score = 0
 	window_size = get_viewport_rect().size
 	pass
 

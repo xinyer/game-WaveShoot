@@ -8,6 +8,7 @@ extents = Vector2( 32, 32 )
 
 [node name="Enemy" type="Sprite"]
 modulate = Color( 1, 0, 0.858824, 1 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Wave Shoot"
 run/main_scene="res://Arena.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -30,7 +31,6 @@ window/size/height=640
 window/size/resizable=false
 window/size/test_width=960
 window/size/test_height=640
-window/stretch/aspect="keep"
 
 [input]
 
