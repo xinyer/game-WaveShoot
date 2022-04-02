@@ -7,3 +7,6 @@ You can play this game by this [link](https://xinyer.github.io/game_waveshoot.ht
 ## Screenshots
 
 
+https://user-images.githubusercontent.com/3217112/161389430-2589621d-d972-4788-af0f-a6455f40757f.mov
+
+
