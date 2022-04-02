@@ -23,3 +23,6 @@ func _on_EnemySpawnTimer_timeout():
 		enemy_postion = Vector2(rand_range(-RANGE, window_size.x + RANGE), rand_range(-RANGE, window_size.y + RANGE))
 	
 	Global.instance_node(enemy, enemy_postion, self)
+	
+	# increase enemy create wait time
+	$EnemySpawnTimer.wait_time *= 0.95

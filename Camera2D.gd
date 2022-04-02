@@ -15,7 +15,6 @@ func _process(delta):
 	zoom = lerp(zoom, Vector2(1, 1), 0.3)
 	if screen_shake_start:
 		global_position += Vector2(rand_range(-shake_indensity, shake_indensity), rand_range(-shake_indensity, shake_indensity)) * delta
-		print(global_position)
 
 
 func screen_shake(indensity, time):

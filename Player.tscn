@@ -23,5 +23,6 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
 visible = false
 shape = SubResource( 1 )
+
 [connection signal="timeout" from="ReloadBulletTimer" to="." method="_on_ReloadBulletTimer_timeout"]
 [connection signal="area_entered" from="HitArea" to="." method="_on_HitArea_area_entered"]

@@ -28,6 +28,7 @@ position = Vector2( 481.498, 318.502 )
 environment = SubResource( 1 )
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
 autostart = true
 
 [node name="UI" type="Node2D" parent="."]
@@ -53,5 +54,6 @@ script = ExtResource( 5 )
 
 [node name="ScreenShakeTimer" type="Timer" parent="Camera2D"]
 one_shot = true
+
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
 [connection signal="timeout" from="Camera2D/ScreenShakeTimer" to="Camera2D" method="_on_ScreenShakeTimer_timeout"]
